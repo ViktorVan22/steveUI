@@ -1,3 +1,5 @@
+/lib/__tests__/__snapshots__
+
 /dist/*
 # Logs
 logs
