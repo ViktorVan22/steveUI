@@ -23,6 +23,9 @@
       "noUnusedLocals": true
     },
     "include": [
+      // 添加源文件支持
+      "types/**/*",
+      "lib/**/*"
     ],
     "exclude": [
       "node_modules",
