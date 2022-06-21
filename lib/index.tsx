@@ -1,23 +1,6 @@
 import React from "react";
-import ReactDom from "react-dom";
-import { Icon } from "./icon/icon";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-const fn: React.MouseEventHandler = e => {
-  console.log(e.target);
-};
-
-ReactDom.render(
-  <div>
-    <Icon
-      name="wechatPay"
-      onClick={fn}
-      onMouseEnter={() => {
-        console.log("enter");
-      }}
-      onMouseLeave={() => {
-        console.log("leave");
-      }}
-    />
-  </div>,
-  document.querySelector("#root")
-);
+const root = ReactDOM.createRoot(document.getElementById("root")!);
+root.render(<App />);

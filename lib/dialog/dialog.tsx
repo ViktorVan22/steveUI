@@ -5,7 +5,7 @@ interface DialogProps {
 }
 
 const Dialog: React.FC<DialogProps> = props => {
-  return props.visible ? <div>hi</div> : null;
+  return props.visible ? <div>I am dialog</div> : null;
 };
 
 export { Dialog };
