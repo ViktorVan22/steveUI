@@ -1,13 +1,23 @@
 import React from "react";
 import ReactDom from "react-dom";
-import { Icon } from "./icon";
+import { Icon } from "./icon/icon";
+
+const fn: React.MouseEventHandler = e => {
+  console.log(e.target);
+};
 
 ReactDom.render(
   <div>
-    <Icon name="wechatPay" />
-    <Icon name="alipay" />
-    <Icon name="milkTea" />
-    <Icon name="chips" />
+    <Icon
+      name="wechatPay"
+      onClick={fn}
+      onMouseEnter={() => {
+        console.log("enter");
+      }}
+      onMouseLeave={() => {
+        console.log("leave");
+      }}
+    />
   </div>,
   document.querySelector("#root")
 );
