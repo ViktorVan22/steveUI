@@ -6,6 +6,8 @@ ReactDom.render(
   <div>
     <Icon name="wechatPay" />
     <Icon name="alipay" />
+    <Icon name="milkTea" />
+    <Icon name="chips" />
   </div>,
   document.querySelector("#root")
 );
