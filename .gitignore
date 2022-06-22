@@ -1,5 +1,5 @@
 /lib/__tests__/__snapshots__
-
+/.vscode
 /dist/*
 # Logs
 logs

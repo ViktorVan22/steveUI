@@ -1,0 +1,19 @@
+@import "../helper";
+
+.steveUI-layout {
+  display: flex;
+  flex-direction: column;
+  &-content {
+    flex-grow: 1;
+  }
+  & & {
+    flex-grow: 1;
+    flex-direction: row;
+  }
+  &-hasAside {
+    flex-direction: row;
+    .steveUI-layout {
+      flex-direction: column;
+    }
+  }
+}
