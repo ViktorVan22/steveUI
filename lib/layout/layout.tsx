@@ -23,3 +23,7 @@ const Layout: React.FunctionComponent<Props> = props => {
 };
 
 export { Layout };
+export { Header } from "./header";
+export { Aside } from "./aside";
+export { Content } from "./content";
+export { Footer } from "./footer";
