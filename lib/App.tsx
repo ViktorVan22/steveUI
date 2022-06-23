@@ -1,13 +1,10 @@
 import React from "react";
-import { HashRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, NavLink } from "react-router-dom";
 import { DialogExample } from "./dialog/dialog.example";
-import { IconExample } from "./icon/icon.example";
+import { IconDemo } from "./icon/icon.demo";
 import { Content, Aside, Header, Layout, Footer } from "./layout/layout";
 import { LayoutExample } from "./layout/layout.example";
 import "./App.scss";
-
-// const x = require("!!raw-loader!./icon/icon.example.tsx");
-// console.log(x.default);
 
 function App() {
   return (
@@ -21,19 +18,19 @@ function App() {
             <h2>组件</h2>
             <ul>
               <li>
-                <Link to="/icon">Icon</Link>
+                <NavLink to="/icon">Icon</NavLink>
               </li>
               <li>
-                <Link to="/dialog">Dialog</Link>
+                <NavLink to="/dialog">Dialog</NavLink>
               </li>
               <li>
-                <Link to="/layout">Layout</Link>
+                <NavLink to="/layout">Layout</NavLink>
               </li>
             </ul>
           </Aside>
           <Content className="site-main">
             <Routes>
-              <Route path="/icon" element={<IconExample />} />
+              <Route path="/icon" element={<IconDemo />} />
               <Route path="/dialog" element={<DialogExample />} />
               <Route path="/layout" element={<LayoutExample />} />
             </Routes>
