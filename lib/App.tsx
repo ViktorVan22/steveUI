@@ -6,18 +6,18 @@ import { Content, Aside, Header, Layout, Footer } from "./layout/layout";
 import { LayoutExample } from "./layout/layout.example";
 import "./App.scss";
 
-const x = require("!!raw-loader!./icon/icon.example.tsx");
-console.log(x.default);
+// const x = require("!!raw-loader!./icon/icon.example.tsx");
+// console.log(x.default);
 
 function App() {
   return (
     <HashRouter>
-      <Layout className="page" style={{ border: "1px solid red" }}>
-        <Header style={{ border: "1px solid green" }}>
+      <Layout className="site-page">
+        <Header className="site-header">
           <div className="logo">steveUI</div>
         </Header>
         <Layout>
-          <Aside style={{ border: "1px solid blue" }}>
+          <Aside className="site-aside">
             <h2>组件</h2>
             <ul>
               <li>
@@ -31,7 +31,7 @@ function App() {
               </li>
             </ul>
           </Aside>
-          <Content style={{ border: "1px solid grey" }}>
+          <Content className="site-main">
             <Routes>
               <Route path="/icon" element={<IconExample />} />
               <Route path="/dialog" element={<DialogExample />} />
@@ -39,7 +39,7 @@ function App() {
             </Routes>
           </Content>
         </Layout>
-        <Footer style={{ border: "1px solid purple" }}>footer</Footer>
+        <Footer className="site-footer">footer</Footer>
       </Layout>
     </HashRouter>
   );
